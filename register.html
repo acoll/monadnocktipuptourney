@@ -14,6 +14,9 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
 
@@ -48,7 +51,7 @@
           <ul class="nav navbar-nav navbar-right" style='padding-top: 5px'>
             <li><a href="index.html">HOME</a></li>
             <li class="active"><a href="register.html">REGISTER</a></li>
-            <!-- <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li> -->
+            <!-- <li><a data-toggle="modal" data-target="#registerModal" href="#registerModal"><i class="fa fa-envelope-o"></i></a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -64,13 +67,89 @@
 		</div><!-- container -->
 	</div><!-- blue wrap -->
 
-
-	<div class="container w">
-		<div class="row centered">
-			<h2> COMING SOON </h2>
-			<br>
-		</div><!-- row -->
-	</div><!-- container -->
+  <!-- PRICING SECTION -->
+  <div id="dg">
+    <div class="container">
+      <div class="row centered">
+        <br>
+        <div class="col-lg-4">
+                    <!-- START PRICING TABLE -->
+                    <div class="pricing-option">
+                        <div class="pricing-top">
+                            <span class="pricing-edition">Kids under 12</span>
+                            <span class="price">
+                                <sup>$</sup>
+                                <span class="price-amount">0</span>
+                            </span>
+                        </div>
+                        <ul>
+                            <li>Entry into the hourly prize drawings</li>
+                            <li>Entry into the largest fish contests</li>
+                            <!-- <li></li>
+                            <li><strong>10GB</strong> Storage</li>
+                            <li>Up to <strong>10</strong> Users</li>
+                            <li><strong>5</strong> Domains</li>
+                            <li><strong>Free</strong> Setup</li>
+                            <li><strong>1-year</strong> Free support *</li> -->
+                        </ul>
+                        <a href="#" class="pricing-signup" disabled>Sign up on derby day</a>
+                    </div><!-- /pricing-option -->
+                    <!-- END PRICING TABLE -->
+        </div><!-- /col -->
+        
+        <div class="col-lg-4">
+                    <!-- START PRICING TABLE -->
+                    <div class="pricing-option">
+                        <div class="pricing-top">
+                            <span class="pricing-edition">Adult</span>
+                            <span class="price">
+                                <sup>$</sup>
+                                <span class="price-amount">15</span>
+                            </span>
+                        </div>
+                        <ul>
+                            <li>Entry into the hourly prize drawings</li>
+                            <li>Entry into the largest fish contests</li>
+                            <!-- <li><strong>20GB</strong> Storage</li>
+                            <li>Up to <strong>20</strong> Users</li>
+                            <li><strong>10</strong> Domains</li>
+                            <li><strong>Free</strong> Setup</li>
+                            <li><strong>2-year</strong> Free support  *</li>-->
+                        </ul>
+                        <a href="#registerModal" data-toggle="modal" data-target="#registerModal" class="pricing-signup" >Pre-Register Now</a>
+                    </div><!-- /pricing-option -->
+                    <!-- END PRICING TABLE -->
+        </div><!-- /col -->
+        
+        <div class="col-lg-4">
+                    <!-- START PRICING TABLE -->
+                    <div class="pricing-option">
+                        <div class="pricing-top">
+                            <span class="special-label">You are awesome!</span>
+                            <span class="pricing-edition">Donation</span>
+                            <span class="price">
+                                <sup>$</sup>
+                                <span class="price-amount">
+                                  <input id="donate-amount-input" value=20.00 type="number" min="1" step="any" style='width: 75%; background-color: transparent; color: white; font-size: 80px' />
+                                </span>
+                            </span>
+                        </div>
+                        <ul>
+                          <li> Click in the box above to change the amount. </li>
+                          <li> Then click below to continue. </li>
+                            <!-- <li><strong>150GB</strong> Storage</li>
+                            <li><strong>Unlimited</strong> Users</li>
+                            <li><strong>50</strong> Domains</li>
+                            <li><strong>Free</strong> Setup</li>
+                            <li><strong>5-year</strong> Free support *</li> -->
+                        </ul>
+                        <a href="#donateModal" data-toggle="modal" data-target="#donateModal" class="pricing-signup">Donate</a>
+                    </div><!-- /pricing-option -->
+                    <!-- END PRICING TABLE -->
+        </div><!-- /col -->
+      </div><!-- row -->
+    </div><!-- container -->
+  </div><!-- DG -->
 	
 	
 	<div id="r">
@@ -94,11 +173,37 @@
 		</div><!-- container -->
 	</div><!-- Footer -->
 
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="registerModalLabel">2016 Registration</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row centered">
+              <form id="registerForm">
+                <input name='name' placeholder='Name of Angler' required />
+                <input name='address' placeholder='Address' required />
+                <input name='phone' placeholder='Phone Number' required />
+                <input name='email' placeholder='Email' required />
+                <input name='age' placeholder='Age' type='number' min=12 max=150 step=1 required/>
+                <div class="pull-right">
+                  <button type="submit" class="btn btn-primary">Next</button>
+                </div>
+              </form> 
+            </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/register.js" ></script>
   </body>
 </html>

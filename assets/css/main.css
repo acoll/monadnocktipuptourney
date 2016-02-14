@@ -11,6 +11,18 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
 
+/* STUFF I ADDED*/
+form {
+    padding: 0 20px 0 20px;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
 /* OVERALL ASPECT */
 
 body {
@@ -133,12 +145,12 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background:  linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../img/lake.jpeg);
+	background:  linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../img/Ice FishingDads50th 001.JPG');
 	margin-top: -10px;
 	padding-top:20px;
 	text-align:center;
 	background-attachment: relative;
-	/*background-position: center center;*/
+	background-position: center center;
 	min-height: 500px;
 	width: 100%;
 	
@@ -154,7 +166,7 @@ a:after {
 }
 
 #headerwrap h1 {
-	margin-top: 100px;
+	margin-top: 120px;
 	color: white;
 	font-size: 70px;
 	font-weight: 300;
