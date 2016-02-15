@@ -19,6 +19,16 @@
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44078533-4', 'auto');
+      ga('require', 'linkid');
+      ga('send', 'pageview');
+    </script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -85,20 +95,12 @@
                         <ul>
                             <li>Entry into the hourly prize drawings</li>
                             <li>Entry into the largest fish contests</li>
-                            <!-- <li></li>
-                            <li><strong>10GB</strong> Storage</li>
-                            <li>Up to <strong>10</strong> Users</li>
-                            <li><strong>5</strong> Domains</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>1-year</strong> Free support *</li> -->
                         </ul>
-                        <a href="#" class="pricing-signup" disabled>Sign up on derby day</a>
-                    </div><!-- /pricing-option -->
-                    <!-- END PRICING TABLE -->
-        </div><!-- /col -->
+                        <a class="pricing-signup" disabled>Sign up on derby day</a>
+                    </div>
+        </div>
         
         <div class="col-lg-4">
-                    <!-- START PRICING TABLE -->
                     <div class="pricing-option">
                         <div class="pricing-top">
                             <span class="pricing-edition">Adult</span>
@@ -110,16 +112,10 @@
                         <ul>
                             <li>Entry into the hourly prize drawings</li>
                             <li>Entry into the largest fish contests</li>
-                            <!-- <li><strong>20GB</strong> Storage</li>
-                            <li>Up to <strong>20</strong> Users</li>
-                            <li><strong>10</strong> Domains</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>2-year</strong> Free support  *</li>-->
                         </ul>
-                        <a href="#registerModal" data-toggle="modal" data-target="#registerModal" class="pricing-signup" >Pre-Register Now</a>
-                    </div><!-- /pricing-option -->
-                    <!-- END PRICING TABLE -->
-        </div><!-- /col -->
+                        <a href="#comingSoonModal" data-toggle="modal" data-target="#comingSoonModal" class="pricing-signup">Pre-Register Now</a>
+                    </div>
+        </div>
         
         <div class="col-lg-4">
                     <!-- START PRICING TABLE -->
@@ -137,14 +133,10 @@
                         <ul>
                           <li> Click in the box above to change the amount. </li>
                           <li> Then click below to continue. </li>
-                            <!-- <li><strong>150GB</strong> Storage</li>
-                            <li><strong>Unlimited</strong> Users</li>
-                            <li><strong>50</strong> Domains</li>
-                            <li><strong>Free</strong> Setup</li>
-                            <li><strong>5-year</strong> Free support *</li> -->
                         </ul>
-                        <a href="#donateModal" data-toggle="modal" data-target="#donateModal" class="pricing-signup">Donate</a>
-                    </div><!-- /pricing-option -->
+                        <!-- <a id="donate-button" href="#" class="pricing-signup">Donate</a> -->
+                         <a href="#comingSoonModal" data-toggle="modal" data-target="#comingSoonModal" class="pricing-signup">Donate</
+                    </div>
                     <!-- END PRICING TABLE -->
         </div><!-- /col -->
       </div><!-- row -->
@@ -182,21 +174,46 @@
         </div>
         <div class="modal-body">
             <div class="row centered">
+              <p style='padding: 0px 15px 0px 15px;'>Address, Phone or Email will be used to contact you in case you are unable to claim a hourly drawing prize. Don't register children that are 12 and under until day of the derby.</p>
               <form id="registerForm">
                 <input name='name' placeholder='Name of Angler' required />
-                <input name='address' placeholder='Address' required />
-                <input name='phone' placeholder='Phone Number' required />
-                <input name='email' placeholder='Email' required />
-                <input name='age' placeholder='Age' type='number' min=12 max=150 step=1 required/>
-                <div class="pull-right">
-                  <button type="submit" class="btn btn-primary">Next</button>
+                <input name='address' placeholder='Address' />
+                <input name='phone' placeholder='Phone Number'  />
+                <input name='email' placeholder='Email' />
+                <input name='age' placeholder='Age' type='number' min=13 max=150 step=1 required/>
+                 <div class="pull-left">
+                  <button class="add-another btn btn-secondary">Add Registrant</button>
                 </div>
               </form> 
             </div>
         </div>
+         <div class="modal-footer">
+          <div style='text-align: left'>
+            <h4>Registrants</h4>
+            <div id='registrants-list'>
+            </div>
+          </div>
+          <button id="submitRegistration" type="submit" class="btn btn-primary" disabled>All Done</button>
+        </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+
+  <div class="modal fade" id="comingSoonModal" tabindex="-1" role="dialog" aria-labelledby="comingSoonModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="comingSoonModalLabel">Paperwork</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row centered">
+              <p style='padding: 0px 15px 0px 15px;'>Online registration and donation will be working very soon. We will update you on facebook as soon as it becomes available.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     <!-- Bootstrap core JavaScript
